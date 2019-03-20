@@ -1,0 +1,10 @@
+git checkout master
+git fetch -p
+git merge origin/master
+git branch --merged | grep -v "\*" | xargs -n 1 git branch -d
+echo
+echo "===== Branches ====="
+git branch
+echo
+echo "===== Stashes ====="
+git stash list
